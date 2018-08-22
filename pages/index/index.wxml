@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <view>
+        <view class="userinfo-nickname">{{userInfo.nickName}}</view>
+        <view class="userinfo-title">相信技术的力量~</view>
+      </view>
+    </block>
+  </view>
+  <view class="navbar">
+    <!--  顶部TabList  -->
+    <view wx:if="{{tab_config.fixed}}" class="tab-bar">
+      <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+        <text>{{item}}</text>
+      </view>
+      <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset}}px;" class="under-line withAnimate"></view>
+    </view>
+    <scroll-view wx:else class="tab-bar" scroll-x="true" bindscroll="onScroll" style="width: 100%;" scroll-left="{{tab_config.tab_left}}">
+      <view wx:for="{{tab_config.tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{tab_config.active_tab==index?'tab-active':''}} " style="width: {{tab_config.item_width}}px;">
+        <text>{{item}}</text>
+      </view>
+      <view style="width: {{tab_config.item_width-tab_config.underline.margins}}px; left: {{tab_config.underline.offset+10}}px;" class="under-line withAnimate"></view>
+    </scroll-view>
+
+  <!--  滑动页面  -->
+    <swiper class='swiper' bindchange='bindChange' current='{{swipe_config.current}}' indicator-dots='{{swipe_config.indicator_dots}}' autoplay='{{swipe_config.autoplay}}'>
+      <block wx:for="{{orderList}}" wx:for-item='orders'>
+        <swiper-item class='swiper-item'>
+          <view>
+            ssd
+          </view>
+        </swiper-item>
+      </block>
+      
+    </swiper>
+  </view>
+</view>

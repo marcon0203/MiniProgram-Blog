@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#993399",
+    "navigationBarTitleText": "blog",
+    "navigationBarTextStyle": "#fff"
+  }
+}
