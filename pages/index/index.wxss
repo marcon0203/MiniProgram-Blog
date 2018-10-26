@@ -7,20 +7,26 @@
   display: flex;
   align-items: center;
 }
+.infomation {
+  z-index: 9999999;
+}
 .userinfo-avatar {
   width: 128rpx;
   height: 128rpx;
   margin: 20rpx;
   border-radius: 50%;
   border: 8rpx solid #fff;
+  z-index: 9999999;
 }
 
 .userinfo-nickname {
   color: #fff;
+  z-index: 9999999;
 }
 .userinfo-title {
   font-size: 32rpx;
   color: #fff;
+  z-index: 9999999;
 }
 .usermotto {
   margin-top: 200px;
@@ -67,4 +73,89 @@
   height: 2px;
   top: 38px;
   background-color: #9933cc;
+}
+.swiper .swiper-item {
+  overflow: scroll;
+}
+.refresh-block {
+  text-align: center;
+  width: 100%;
+  height: 32px;
+  background: #e6e6e6;
+}
+.refresh-block image {
+  width: 32px;
+  height: 32px;
+}
+.back_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  text-align: right;
+}
+/* CSS3 keyframes */
+@-webkit-keyframes ckw {
+  0% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes cckw {
+  0% {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+  }
+  100% {
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+}
+.back {
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+}
+.back_g1 {
+  height: 85px;
+  left: 31px;
+  top: 45px;
+  width: 85px;
+  -webkit-animation-name: ckw;
+  -webkit-animation-duration: 10s;
+}
+.back_g2 {
+  height: 125px;
+  left: 105px;
+  top: 10px;
+  width: 125px;
+
+  -webkit-animation-name: cckw;
+  -webkit-animation-duration: 16.84s;
+}
+.back_g3 {
+  height: 103px;
+  left: 149px;
+  top: 118px;
+  width: 103px;
+
+  -webkit-animation-name: ckw;
+  -webkit-animation-duration: 13.5s;
+}
+.back_g4 {
+  height: 144px;
+  left: 46px;
+  top: 173px;
+  width: 144px;
+
+  -webkit-animation-name: cckw;
+  -webkit-animation-duration: 20.2s;
 }

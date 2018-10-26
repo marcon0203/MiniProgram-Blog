@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "front": "/components/front/index"
+  },
+  "disableScroll": true
+}

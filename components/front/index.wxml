@@ -1,0 +1,24 @@
+<view class="container">
+    <view class="content-list">
+        <view class="content-grid" wx:for="{{currentContent}}" wx:key="unique" wx:for-item="content">
+            <view class="title">
+                {{content.title}}
+            </view>
+            <view class="content">
+                {{content.content}}
+            </view>
+            <view class="icon">
+                <view class="view">
+                    <image src="/assets/icon/view.png" />({{content.viewNum}})
+                </view>
+                <view class="praise">
+                    <image src="/assets/icon/praise.png" />({{content.praiseNum}})
+                </view>
+                <view class="comment">
+                    <image src="/assets/icon/comment.png" />({{content.commentNum}})
+                </view>
+            </view>
+        </view>
+    </view>
+    
+</view>
